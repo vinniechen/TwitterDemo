@@ -9,20 +9,21 @@
 import UIKit
 
 class Tweet: NSObject {
-    var text: NSString?
+    var text: String?
     var timestamp: NSDate?
     var retweetCount: Int = 0
     var favoriteCount: Int = 0
     
-    var profileUrl: NSURL?
+    var profileImageUrl: URL?
     var username: String?
     var name: String?
     
     init(dictionary: NSDictionary) {
-        text = dictionary["text"] as? NSString
+        text = dictionary["text"] as! String
         
         retweetCount = (dictionary["retweet_count"] as? Int) ?? 0
-        favoriteCount = (dictionary["favourites_count"] as? Int) ?? 0
+        favoriteCount = (dictionary["favorite_count"] as? Int) ?? 0
+        print("\(text)")
         
         let timestampString = dictionary["created_at"] as? String
         
@@ -32,18 +33,17 @@ class Tweet: NSObject {
             timestamp = formatter.date(from: timestampString) as NSDate?
         }
         
+        let user = dictionary["user"] as? NSDictionary
+        name = user?["name"] as! String
+        username = user?["screen_name"] as! String
         
         
-        let user = dictionary["user"] as? [String : Any]
-        name = user?["name"] as? [String : Any]
-        username = user?["screen_name"] as? [String : Any]
-        
-        let profileUrlString = user?["profile_image_url_https"] as? [URL : Any]
+        let profileUrlString = user?["profile_image_url_https"] as? String
         if let profileUrlString = profileUrlString {
-            profileUrl = NSURL(string: profileUrlString)
+            profileImageUrl = URL(string: profileUrlString)
         }
         
-        print("\(username)")
+        
         
         
     }
