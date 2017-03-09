@@ -55,72 +55,10 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         
         cell.tweet = tweets![indexPath.row]
         
-       /* cell.tweetTextLabel.text = tweets[indexPath.row].text as! String
-        cell.nameLabel.text = tweets[indexPath.row].name! as String
-        cell.dateTimeLabel.text = "\(tweets[indexPath.row].timestamp)"
-        cell.likeCountLabel.text =  */
-        
-        /*
-        cell.tweetLabel.text = tweets?[indexPath.row].text as? String
-        cell.nameLabel.text = tweets?[indexPath.row].username as? String
-        cell.tweetID = tweets?[indexPath.row].tweetID as? String
-        
-        let retweets = tweets?[indexPath.row].retweetCount
-        if retweets == nil {
-            cell.retweetCount.text =  ""
-        } else {
-            cell.retweetCount.text =  "\(retweets!)"
-            let retweetOffImg = UIImage(named: "retweet") as UIImage?
-            cell.retweetButton.setImage(retweetOffImg, forState: .Normal)
-            
-            let replyImg = UIImage(named: "reply") as UIImage?
-            
-            cell.replyButton.setImage(replyImg, forState: .Normal)
-        }
-        
-        let favorites = tweets?[indexPath.row].favoritesCount
-        if favorites == nil {
-            cell.favoriteCount.text = ""
-        } else {
-            cell.favoriteCount.text =  "\(favorites!)"
-            let likeOffImg = UIImage(named: "like") as UIImage?
-            cell.favoriteButton.setImage(likeOffImg, forState: .Normal)
-            
-        }
-        
-        let didRetweet = tweets?[indexPath.row].retweeted
-        if didRetweet == true {
-            cell.retweetButton.setImage(self.retweetOnImg, forState: .Normal)
-        }
-        
-        let didFavorite = tweets?[indexPath.row].favorited
-        if didFavorite == true {
-            cell.favoriteButton.setImage(self.likeOnImg, forState: .Normal)
-        }
-        
-        let screen_name = tweets?[indexPath.row].screenname as? String
-        if screen_name == nil {
-            cell.screennameLabel.text = ""
-        } else {
-            cell.screennameLabel.text = "@\(screen_name!)"
-        }
-        
-        let timestamp = tweets?[indexPath.row].timestamp
-        if timestamp == nil {
-            cell.timestampLabel.text =  ""
-        } else {
-            cell.timestampLabel.text =  "\(timestamp!)"
-        }
-        
-        let imageUrl = tweets?[indexPath.row].profileUrl
-        if imageUrl == nil {
-            cell.profileImg.image = nil
-        } else {
-            cell.profileImg.setImageWithURL(imageUrl!)
-        }
-      */
         return cell
     }
+    
+    
 
     /*
     // MARK: - Navigation

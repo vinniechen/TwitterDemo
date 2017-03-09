@@ -17,6 +17,8 @@ class Tweet: NSObject {
     var profileImageUrl: URL?
     var username: String?
     var name: String?
+    var didFavorite: Bool!
+    var didRT: Bool!
     
     init(dictionary: NSDictionary) {
         text = dictionary["text"] as! String
@@ -43,7 +45,8 @@ class Tweet: NSObject {
             profileImageUrl = URL(string: profileUrlString)
         }
         
-        
+        didFavorite = dictionary["favorited"] as? Bool
+        didRT = dictionary["retweeted"] as? Bool
         
         
     }
