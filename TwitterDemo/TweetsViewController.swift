@@ -34,6 +34,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     @IBAction func logout(_ sender: Any) {
         TwitterClient.sharedInstance?.logout()
     }
+    
+    @IBAction func onCompose(_ sender: Any) {
+    
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,7 +63,40 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        
+        
+        if segue.identifier == "detailsSegue" {
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)
+            let tweet = tweets?[(indexPath?.row)!]
+            
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.tweet = tweet
+        }
+        
+        if segue.identifier == "composeSegue" {
+            if let navController = segue.destination as? UINavigationController {
+                let topViewController = navController.topViewController as! ComposeViewController
+               
+            }
+        }
+        
+        
+        
+       /*
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)
+        let movie = movies?[(indexPath?.row)!]
+        
+        let detailViewController = segue.destination as! DetailViewController
+        detailViewController.movie = movie
+ */
+        
+    }
 
     /*
     // MARK: - Navigation

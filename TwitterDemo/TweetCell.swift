@@ -32,6 +32,7 @@ class TweetCell: UITableViewCell {
             retweetCountLabel.text = "\(tweet.retweetCount)"
             likeCountLabel.text = "\(tweet.favoriteCount)"
             pictureImage.setImageWith(tweet.profileImageUrl!)
+            
             favoriteButton.setImage(UIImage(named: "favorite"), for: .normal)
             if tweet.didFavorite == true {
                 favoriteButton.tintColor = UIColor.red
@@ -45,10 +46,13 @@ class TweetCell: UITableViewCell {
             } else {
                  retweetButton.tintColor = UIColor.gray
             }
-           
             
         }
     }
+    @IBAction func onProfilePic(_ sender: Any) {
+    
+    }
+    
     
     @IBAction func retweetPress(_ sender: Any) {
         retweetButton.tintColor = UIColor.blue
