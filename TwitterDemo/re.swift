@@ -55,9 +55,9 @@ class DetailViewController: UIViewController {
     var favoriteString: String!
     var retweetString: String!
     
-    /*
+    
     @IBAction func retweetPress(_ sender: Any) {
-            self.retweetString = "1.1/statuses/retweet/\(tweetID).json"
+            self.retweetString = "1.1/statuses/retweet/\(tweetID).json" 
         TwitterClient.sharedInstance?.post(retweetString, parameters: nil, progress: nil, success: { (task: URLSessionDataTask, Any) in
                 self.retweetButton.tintColor = UIColor.blue
                 self.dismiss(animated: true, completion: nil)
@@ -66,7 +66,7 @@ class DetailViewController: UIViewController {
                 print("Error: \(error.localizedDescription)")
         })
         
-    } */
+    } 
     
     @IBAction func favoritePress(_ sender: Any) {
     }

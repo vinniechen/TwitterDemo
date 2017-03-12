@@ -42,7 +42,7 @@ class Tweet: NSObject {
         let user = dictionary["user"] as? NSDictionary
         name = user?["name"] as! String
         username = user?["screen_name"] as! String
-        username = "@\(username)"
+        username = "@\(username!)"
         
         let profileUrlString = user?["profile_image_url_https"] as? String
         if let profileUrlString = profileUrlString {

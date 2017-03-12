@@ -14,6 +14,20 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) in
+            self.tweets = tweets
+            self.tableView.reloadData()
+            
+        }, failure: { (error: Error) in
+            print("\(error.localizedDescription)")
+        })
+    }
+        
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
