@@ -1,6 +1,6 @@
 # Project 4 - *TwitterDemo*
 
-**Name of your app** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
+TwitterDemo is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
 Time spent: **15+??** hours spent in total
 
@@ -58,9 +58,9 @@ Describe any challenges encountered while building the app.
     See the License for the specific language governing permissions and
     limitations under the License.
     
-# Project 5 - *Twitter pt2*
+# Project 5 - *TwitterDemo 2*
 
-Time spent: **X** hours spent in total
+Time spent: 30 hours spent in total
 
 ## User Stories
 
