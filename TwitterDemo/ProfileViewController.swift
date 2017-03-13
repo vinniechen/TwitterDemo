@@ -9,11 +9,29 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
+    var user: User!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var followersLabel: UILabel!
+    @IBOutlet weak var followingLabel: UILabel!
+    @IBOutlet weak var numTweetsLabel: UILabel!
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        print(user)
+        nameLabel.text = user.name as String?
+        usernameLabel.text = user.screenname as String?
+        followersLabel.text = "\(user.followers) followers"
+        followingLabel.text = "\(user.following) following"
+        numTweetsLabel.text = "\(user.numTweets) tweets"
+        
     }
 
     override func didReceiveMemoryWarning() {

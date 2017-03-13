@@ -86,6 +86,7 @@ class TwitterClient: BDBOAuth1SessionManager {
         get("1.1/account/verify_credentials.json", parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
             let userDictionary = response as? NSDictionary
             let user = User(dictionary: userDictionary!)
+            print(user)
             
             success(user)
             
@@ -93,6 +94,22 @@ class TwitterClient: BDBOAuth1SessionManager {
             
         })
     }
+   /*
+    // fetches selected user
+    func getUser(user_id: Int) {
+        
+        get("1.1/users/show.json", parameters: user_id, progress: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
+            let userDictionary = response as? NSDictionary
+            let user = UserProfile(dictionary: userDictionary!)
+            print(user)
+            
+            
+            
+        }, failure: { (task: URLSessionDataTask?, response: Any?) -> Void in
+            
+        })
+        
+    } */
     
     
 }

@@ -69,7 +69,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXt-y8-sEC">
-                                                    <rect key="frame" x="81" y="7" width="137" height="21"/>
+                                                    <rect key="frame" x="81" y="7" width="130" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -80,7 +80,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrb-7W-fTW">
-                                                    <rect key="frame" x="219" y="7" width="93" height="21"/>
+                                                    <rect key="frame" x="213" y="7" width="99" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -134,8 +134,7 @@
                                                     <rect key="frame" x="8" y="8" width="65" height="63"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="onProfilePic:" destination="ipV-fh-4bN" eventType="touchUpInside" id="GRF-hR-IGJ"/>
-                                                        <segue destination="6t3-PD-Eiy" kind="show" id="PWh-kC-yiW"/>
+                                                        <segue destination="6t3-PD-Eiy" kind="show" identifier="profileSegue" id="PWh-kC-yiW"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -166,7 +165,6 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Compose" id="vPh-sq-3hN">
                             <connections>
-                                <action selector="onCompose:" destination="zfk-7X-HmL" id="zuk-aF-oTT"/>
                                 <segue destination="D5j-5k-CT0" kind="popoverPresentation" identifier="composeSegue" popoverAnchorBarButtonItem="vPh-sq-3hN" id="nUc-yN-lsA">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
@@ -318,10 +316,10 @@
             </objects>
             <point key="canvasLocation" x="1899.375" y="972.88732394366195"/>
         </scene>
-        <!--View Controller-->
+        <!--ProfileViewController-->
         <scene sceneID="ugD-9o-b5O">
             <objects>
-                <viewController id="6t3-PD-Eiy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" title="ProfileViewController" id="6t3-PD-Eiy" customClass="ProfileViewController" customModule="TwitterDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dXM-z9-4hO"/>
                         <viewControllerLayoutGuide type="bottom" id="Yhk-o0-cVu"/>
@@ -349,14 +347,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxK-wX-Mix">
-                                <rect key="frame" x="16" y="165" width="143" height="21"/>
+                                <rect key="frame" x="16" y="230" width="143" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7G-cG-qTm">
-                                <rect key="frame" x="167" y="165" width="137" height="22"/>
+                                <rect key="frame" x="167" y="230" width="137" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyh-Ai-olT">
+                                <rect key="frame" x="16" y="260" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ4-Gp-GwQ">
+                                <rect key="frame" x="16" y="165" width="288" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -365,6 +377,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="IZ4-Gp-GwQ" id="w8H-6Z-Lly"/>
+                        <outlet property="followersLabel" destination="yxK-wX-Mix" id="nvd-Rc-L4J"/>
+                        <outlet property="followingLabel" destination="u7G-cG-qTm" id="f6s-3e-WxM"/>
+                        <outlet property="nameLabel" destination="6gM-AO-EFO" id="UPI-bQ-OA2"/>
+                        <outlet property="numTweetsLabel" destination="hyh-Ai-olT" id="uAM-ub-SuO"/>
+                        <outlet property="profileImage" destination="LJ4-uJ-Xiz" id="gbF-B5-zNq"/>
+                        <outlet property="usernameLabel" destination="caR-xV-NFc" id="5PE-mZ-gVT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNv-QN-BuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -22,6 +22,8 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var retweetButton: UIButton!
     
+    var user: User?
+    
     var tweet: Tweet! {
         didSet {
             //nameLabel.text = tweet.

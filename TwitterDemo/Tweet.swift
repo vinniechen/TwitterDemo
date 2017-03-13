@@ -20,11 +20,13 @@ class Tweet: NSObject {
     var didFavorite: Bool!
     var didRT: Bool!
     var tweetID: String?
+    var user: User?
     
     //pt2
     
     
     init(dictionary: NSDictionary) {
+        user = User(dictionary: dictionary["user"] as! NSDictionary)
         text = dictionary["text"] as! String
         
         retweetCount = (dictionary["retweet_count"] as? Int) ?? 0
@@ -39,12 +41,11 @@ class Tweet: NSObject {
             timestamp = formatter.date(from: timestampString) as NSDate?
         }
         
-        let user = dictionary["user"] as? NSDictionary
-        name = user?["name"] as! String
-        username = user?["screen_name"] as! String
+        let userInfo = dictionary["user"] as? NSDictionary
+        name = userInfo?["name"] as! String
+        username = userInfo?["screen_name"] as! String
         username = "@\(username!)"
-        
-        let profileUrlString = user?["profile_image_url_https"] as? String
+               let profileUrlString = userInfo?["profile_image_url_https"] as? String
         if let profileUrlString = profileUrlString {
             profileImageUrl = URL(string: profileUrlString)
         }

@@ -49,9 +49,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         TwitterClient.sharedInstance?.logout()
     }
     
-    @IBAction func onCompose(_ sender: Any) {
     
-    }
     
 
     override func didReceiveMemoryWarning() {
@@ -99,6 +97,26 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             }
         }
         
+        if segue.identifier == "profileSegue" {
+            
+            let button = sender as! UIButton
+            let view = button.superview!
+            let cell = view.superview as! UITableViewCell
+            
+            
+            let indexPath = tableView.indexPath(for: cell)
+            let tweet = tweets?[(indexPath?.row)!]
+           // print("tweet \(tweet)")
+            let user = tweet?.user
+           // print("BEFORE SEGUE: \(user!)")
+            
+           
+            if let profileController = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
+                profileController.user = user //set the profile user before your push
+                //self.navigationController?.pushViewController(profileController, animated: true)
+            }
+
+        }
         
         
        /*

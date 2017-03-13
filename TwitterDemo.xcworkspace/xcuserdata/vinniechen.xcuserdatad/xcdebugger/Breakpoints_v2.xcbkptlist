@@ -65,6 +65,38 @@
             endingLineNumber = "65"
             landmarkName = "retweetPress(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterDemo.DetailViewController.retweetPress (Any) -&gt; ()"
+                  moduleName = "TwitterDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinniechen1/TwitterDemo/TwitterDemo/DetailViewController.swift"
+                  timestampString = "511059861.635146"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "1571">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterDemo.DetailViewController.(retweetPress (Any) -&gt; ()).(closure #1)"
+                  moduleName = "TwitterDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinniechen1/TwitterDemo/TwitterDemo/DetailViewController.swift"
+                  timestampString = "511059861.637901"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "634">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -105,14 +137,94 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TwitterDemo/LoginViewController.swift"
-            timestampString = "511029060.107221"
+            filePath = "TwitterDemo/TweetsViewController.swift"
+            timestampString = "511059794.742152"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "didReceiveMemoryWarning()"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterDemo.TweetsViewController.prepare (for : __ObjC.UIStoryboardSegue, sender : Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "TwitterDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinniechen1/TwitterDemo/TwitterDemo/TweetsViewController.swift"
+                  timestampString = "511059861.649933"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "4586">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterDemo.TweetsViewController.prepare (for : __ObjC.UIStoryboardSegue, sender : Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "TwitterDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinniechen1/TwitterDemo/TwitterDemo/TweetsViewController.swift"
+                  timestampString = "511059861.651321"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "5194">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterDemo/TweetsViewController.swift"
+            timestampString = "511059794.742152"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterDemo.TweetsViewController.prepare (for : __ObjC.UIStoryboardSegue, sender : Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "TwitterDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinniechen1/TwitterDemo/TwitterDemo/TweetsViewController.swift"
+                  timestampString = "511059861.654016"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "4586">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterDemo.TweetsViewController.prepare (for : __ObjC.UIStoryboardSegue, sender : Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "TwitterDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinniechen1/TwitterDemo/TwitterDemo/TweetsViewController.swift"
+                  timestampString = "511059861.655222"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "5194">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
