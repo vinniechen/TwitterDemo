@@ -56,8 +56,37 @@ class DetailViewController: UIViewController {
     var retweetString: String!
     
     
+    
     @IBAction func retweetPress(_ sender: Any) {
-            self.retweetString = "1.1/statuses/retweet/\(tweetID).json" 
+       retweetButton.tintColor = UIColor.blue
+        
+        let path = "https://api.twitter.com/1.1/statuses/retweet/\(tweet.tweetID!).json"
+        print(path)
+        TwitterClient.sharedInstance?.post(path, parameters: nil, progress: nil, success: { (task, data) in
+            print("successfull retweet!")
+        }, failure: { (task, error) in
+            print(error.localizedDescription)
+        })
+       /* let path = tweet.id
+        
+        if tweet.retweeted == false {
+            TwitterClient.sharedInstance!.retweet(id: path, params: nil) { (error) -> () in
+                print("Retweeting from TweetsViewController")
+                self.tweets![indexPath!.row].retweetCount += 1
+                tweet.retweeted = true
+                self.tableView.reloadData()
+            }
+        } else if tweet.retweeted == true {
+            TwitterClient.sharedInstance!.unretweet(id: path, params: nil, completion: { (error) -> () in
+                print("Unretweeting from TweetsViewController")
+                self.tweets![indexPath!.row].retweetCount -= 1
+                tweet.retweeted = false
+                self.tableView.reloadData()
+            })
+        }
+ */
+        /*
+            self.retweetString = "1.1/statuses/retweet/\(tweetID).json"
         TwitterClient.sharedInstance?.post(retweetString, parameters: nil, progress: nil, success: { (task: URLSessionDataTask, Any) in
                 self.retweetButton.tintColor = UIColor.blue
                 self.dismiss(animated: true, completion: nil)
@@ -65,10 +94,12 @@ class DetailViewController: UIViewController {
         }, failure: { (task: URLSessionDataTask?, error: Error) in
                 print("Error: \(error.localizedDescription)")
         })
+ */
         
     } 
     
     @IBAction func favoritePress(_ sender: Any) {
+        favoriteButton.tintColor = UIColor.red
     }
     
     

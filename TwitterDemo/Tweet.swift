@@ -20,7 +20,13 @@ class Tweet: NSObject {
     var didFavorite: Bool!
     var didRT: Bool!
     var tweetID: String?
+    var retweeted: Bool?
+    var favorited: Bool?
+    var id: Int?
+    
+    
     var user: User?
+    
     
     //pt2
     
@@ -29,7 +35,10 @@ class Tweet: NSObject {
         user = User(dictionary: dictionary["user"] as! NSDictionary)
         text = dictionary["text"] as! String
         
+        retweeted = dictionary["retweeted"] as! Bool
         retweetCount = (dictionary["retweet_count"] as? Int) ?? 0
+        
+        favorited = dictionary["favorited"] as! Bool
         favoriteCount = (dictionary["favorite_count"] as? Int) ?? 0
         print("\(text)")
         
@@ -54,6 +63,7 @@ class Tweet: NSObject {
         didRT = dictionary["retweeted"] as? Bool
         
         tweetID = dictionary["id_str"] as! String
+        id = dictionary["id"] as! Int
         
     }
     

@@ -28,9 +28,13 @@ class ProfileViewController: UIViewController {
         print(user)
         nameLabel.text = user.name as String?
         usernameLabel.text = user.screenname as String?
-        followersLabel.text = "\(user.followers) followers"
-        followingLabel.text = "\(user.following) following"
-        numTweetsLabel.text = "\(user.numTweets) tweets"
+        followersLabel.text = "\(user.followers!) followers"
+        followingLabel.text = "\(user.following!) following"
+        numTweetsLabel.text = "\(user.numTweets!) tweets"
+        profileImage.setImageWith(user.profileURL as! URL)
+        descriptionLabel.text = user.tagline as String?
+        
+        
         
     }
 

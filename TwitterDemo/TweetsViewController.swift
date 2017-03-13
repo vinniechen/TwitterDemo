@@ -16,6 +16,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     
+    
     override func viewDidAppear(_ animated: Bool) {
         TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) in
             self.tweets = tweets
@@ -57,6 +58,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
     
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let tweets = tweets {
             
@@ -74,6 +76,8 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         
         return cell
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -111,10 +115,8 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
            // print("BEFORE SEGUE: \(user!)")
             
            
-            if let profileController = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
-                profileController.user = user //set the profile user before your push
-                //self.navigationController?.pushViewController(profileController, animated: true)
-            }
+            let profileViewController = segue.destination as! ProfileViewController
+            profileViewController.user = user
 
         }
         

@@ -17,6 +17,7 @@ class User: NSObject {
     var following: Int?
     var numTweets: Int?
     
+    
     var dictionary: NSDictionary?
     
      static let userDidLogoutNotification = "UserDidLogout"
@@ -35,6 +36,10 @@ class User: NSObject {
         
         tagline = dictionary["description"] as? NSString
         
+        followers = dictionary["followers_count"] as? Int
+        following = dictionary["friends_count"] as? Int
+        numTweets = dictionary["friends_count"] as? Int
+        
        
     }
     
@@ -50,6 +55,7 @@ class User: NSObject {
                 
                 if let userData = userData {
                     let dictionary = try! JSONSerialization.jsonObject(with: userData as Data, options: []) as! NSDictionary
+                    
                     _currentUser = User(dictionary: dictionary)
                     
                 }
